@@ -15,6 +15,14 @@ typedef struct ROTARY_ENCODER_DATA
 
 } rotary_encoder_t;
 
+/*
+ * Trigger on both edges  
+ */
 void rotary_task(rotary_encoder_t *data);
+
+/*
+ * Trigger on falling edges
+ */
+void rotary_task2(rotary_encoder_t *data);
 
 #endif
