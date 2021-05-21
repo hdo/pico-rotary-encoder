@@ -58,12 +58,14 @@ int main() {
     encoder1.gpio_b = GPIO_ENCODER1_B;
     encoder1.min_value = 0;
     encoder1.max_value = 100;
+    encoder1.factor = 2;
     encoder1.current_value = 100;
 
     encoder2.gpio_a = GPIO_ENCODER2_A;
     encoder2.gpio_b = GPIO_ENCODER2_B;
     encoder2.min_value = 0;    
     encoder2.max_value = 200;
+    encoder2.factor = 5;
     encoder2.current_value = 100;
 
     while (1) {

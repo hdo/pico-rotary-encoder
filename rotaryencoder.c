@@ -33,11 +33,11 @@ void rotary_task(rotary_encoder_t *data) {
             data->dir = 0;
             if ((data->filtered_a) == b) {
                 //puts("R");
-                data->dir = 1;
+                data->dir = 1 * data->factor;
             }
             else {
                 //puts("L");
-                data->dir = -1;
+                data->dir = -1 * data->factor;
             }
             data->current_value += data->dir;
             if (data->current_value < data->min_value) {
@@ -80,10 +80,10 @@ void rotary_task2(rotary_encoder_t *data) {
             // only on falling edge
             if ((data->filtered_a) == 0) {
                 if (b) {   
-                    data->dir = 1;
+                    data->dir = 1 * data->factor;
                 }
                 else {
-                    data->dir = -1;    
+                    data->dir = -1 * data->factor;
                 }
             }
             data->current_value += data->dir;
