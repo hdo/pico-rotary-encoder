@@ -13,10 +13,11 @@ pico_sdk_init()
 
 add_executable(${projname}
     main.c
+    rotaryencoder.c
 )
 
 
 pico_enable_stdio_uart(${projname} 1)
 pico_add_extra_outputs(${projname})
 
-target_link_libraries(${projname} pico_stdlib hardware_irq)
+target_link_libraries(${projname} pico_stdlib)
